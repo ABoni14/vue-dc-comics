@@ -5,8 +5,9 @@
       <ul class="header-nav">
         <li
         v-for="(link, index) in links" 
-        :key="`ciclo-nav${index}`">
-        <a :class="{active : (index === counter)}"
+        :key="`ciclo-nav${index}`"
+        :class="{active : (index === counter)}">
+        <a
         class="nav-list"
         href="#">{{link.text}}</a></li>
       </ul>
@@ -101,6 +102,9 @@ export default {
           border-bottom: 4px solid $primary-color;
           margin-bottom: -4px;
           }
+        &.active a{
+          color: $primary-color;
+        }
         a{
           text-decoration: none;
           color: black;
