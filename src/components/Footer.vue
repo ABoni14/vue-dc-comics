@@ -95,6 +95,10 @@ export default {
               margin-left: -10px;
               color: rgb(189, 189, 189);
               text-transform: unset;
+              &:hover{
+                color: white;
+                border-bottom: none;
+              }
             }
           }
         }
@@ -121,6 +125,7 @@ export default {
         border: 2px solid $primary-color;
         color: white;
         padding: 10px;
+        cursor: pointer;
       }
       .footer-contain-right{
         display: flex;

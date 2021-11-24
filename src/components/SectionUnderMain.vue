@@ -1,19 +1,32 @@
 <template>
   <section>
-    <div
-    v-for="(box, index) in boxes" 
-    :key="`ciclo-box${index}`" 
-    class="box">
-      <img :src="`../assets/img/${box.image}`" :alt="box.url">
-      <h4>{{box.text}}</h4>
+    <div class="container">
+      <div class="box">
+        <img src="../assets/img/buy-comics-digital-comics.png" alt="">
+        <h4>DIGITAL COMICS</h4>
+      </div>
+      <div class="box">
+        <img src="../assets/img/buy-comics-merchandise.png" alt="">
+        <h4>DC MERCHANDISE</h4>
+      </div>
+      <div class="box">
+        <img src="../assets/img/buy-comics-subscriptions.png" alt="">
+        <h4>SUBSCRIPTIONS</h4>
+      </div>
+      <div class="box">
+        <img src="../assets/img/buy-comics-shop-locator.png" alt="">
+        <h4>COMIC SHOP LOCATOR</h4>
+      </div>
+      <div class="box">
+        <img src="../assets/img/buy-dc-power-visa.svg" alt="">
+        <h4>DC POWER VISA</h4>
+      </div>
     </div>
+    
   </section>
 </template>
 
 <script>
-
-import myImg from "../assets/img/buy-comics-digital-comics.png";
-
 export default {
   name: "SectionUnderMain",
 
@@ -22,12 +35,12 @@ export default {
       boxes:[
         {
           url: "/digital-comics",
-          image: myImg,
+          image: "../assets/img/buy-comics-digital-comics.png",
           text: "digital comics",
         },
         {
           url: "/dc-merchandise",
-          image: "buy-comics-merchandise.png",
+          image: "../assets/img/buy-comics-merchandise.png",
           text: "dc merchandise",
         },
         {
@@ -57,17 +70,24 @@ export default {
   section{
     background-color: $primary-color;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     color: white;
-    padding: 20px;
-    .boxed{
-      display: flex;
-      align-items: center;
-      img{
-        width: 70px;
-        margin-right: 5px;
+    padding: 40px;
+    .container{
+      padding: 20px;
+      .box{
+        display: flex;
+        align-items: center;
+        img{
+          width: 50px;
+          margin-right: 5px;
+        }
+        h4{
+          font-size: 15px;
+        }
       }
     }
+    
   }
 </style>
