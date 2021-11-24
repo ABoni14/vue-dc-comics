@@ -1,5 +1,10 @@
 <template>
-
+  <div>
+    <Header />
+    <Main />
+    <SectionUnderMain />
+    <Footer />
+  </div>
 </template>
 
 <script>
@@ -20,5 +25,7 @@ export default {
 </script>
 
 <style lang="scss">
-
+@import "./assets/style/vars.scss";
+@import "./assets/style/general.scss";
+@import "./assets/style/utilities.scss";
 </style>
