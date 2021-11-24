@@ -1,12 +1,14 @@
 <template>
   <header>
-    <div class="container">
+    <div class="container header-contain">
       <img src="../assets/img/dc-logo.png" alt="">
-      <ul>
+      <ul class="header-nav">
         <li
         v-for="(link, index) in links" 
-        :key="`ciclo-nav${index}`"
-        ><a href="#">{{link.text}}</a></li>
+        :key="`ciclo-nav${index}`">
+        <a :class="{active : (index === counter)}"
+        class="nav-list"
+        href="#">{{link.text}}</a></li>
       </ul>
     </div>
     
@@ -70,7 +72,8 @@ export default {
           text: "shop",
           active: false,
         },
-      ]
+      ],
+      counter: 1,
     }
   }
 
@@ -80,30 +83,40 @@ export default {
 <style lang="scss">
   @import "../assets/style/vars.scss";
 
-  .container{
+  header{
     height: 100px;
-    // width: 1100px;
-    // margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    ul li{
-      list-style: none;
-      display: inline-block;
-      a{
-        text-decoration: none;
-        color: black;
-        padding: 10px;
-        font-weight: 500;
-        text-transform: uppercase;
-        &:hover{
+    .container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .header-nav li{
+        list-style: none;
+        display: inline-block;
+        cursor: pointer;
+        &:hover a{
           color: $primary-color;
-          border-bottom: 2px solid $primary-color;
+        }
+        &:hover,
+        &.active{
+          border-bottom: 4px solid $primary-color;
+          margin-bottom: -4px;
+          }
+        a{
+          text-decoration: none;
+          color: black;
+          padding: 10px;
+          text-transform: uppercase;
+          line-height: 96px;
         }
       }
-    }
-    img{
-      width: 70px;
+      img{
+        width: 70px;
+        cursor: pointer;
+      }
+      .nav-list{
+        line-height: 100px;
+      }
     }
   }
+  
 </style>

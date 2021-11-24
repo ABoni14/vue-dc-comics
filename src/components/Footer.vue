@@ -89,16 +89,19 @@ export default {
         .col-list{
           margin-right: 30px;
           .footer-list{
+            list-style: none;
             display: flex;
             flex-direction: column;
-            li a{
-              margin-left: -10px;
-              color: rgb(189, 189, 189);
-              text-transform: unset;
-              &:hover{
-                color: white;
-                border-bottom: none;
+            li{
+              padding: 2px 0;
+              a{
+                color: rgb(189, 189, 189);
+                text-decoration: none;
+                &:hover{
+                  color: white;
+                  border-bottom: none;
               }
+            }
             }
           }
         }
@@ -115,7 +118,10 @@ export default {
     }
   }
   .bottom-footer{
+    height: 100px;
     background-color: #303030;
+    display: flex;
+    align-items: center;
     .container{
       display: flex;
       justify-content: space-between;

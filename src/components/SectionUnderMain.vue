@@ -2,7 +2,7 @@
   <section>
     <div class="container">
       <div class="box">
-        <img src="../assets/img/buy-comics-digital-comics.png" alt="">
+        <img class="little-img" src="../assets/img/buy-comics-digital-comics.png" alt="">
         <h4>DIGITAL COMICS</h4>
       </div>
       <div class="box">
@@ -14,7 +14,7 @@
         <h4>SUBSCRIPTIONS</h4>
       </div>
       <div class="box">
-        <img src="../assets/img/buy-comics-shop-locator.png" alt="">
+        <img class="little-img" src="../assets/img/buy-comics-shop-locator.png" alt="">
         <h4>COMIC SHOP LOCATOR</h4>
       </div>
       <div class="box">
@@ -70,12 +70,14 @@ export default {
   section{
     background-color: $primary-color;
     display: flex;
-    justify-content: space-around;
     align-items: center;
     color: white;
     padding: 40px;
     .container{
       padding: 20px;
+      display: flex;
+    justify-content: space-between;
+
       .box{
         display: flex;
         align-items: center;
@@ -86,8 +88,10 @@ export default {
         h4{
           font-size: 15px;
         }
+        .little-img{
+          width: 38px;
+        }
       }
     }
-    
   }
 </style>
