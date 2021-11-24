@@ -4,7 +4,8 @@
       <img src="../assets/img/dc-logo.png" alt="">
       <ul>
         <li
-        v-for="(link, index) in links" :key="index"
+        v-for="(link, index) in links" 
+        :key="`ciclo-nav${index}`"
         ><a href="#">{{link.text}}</a></li>
       </ul>
     </div>
