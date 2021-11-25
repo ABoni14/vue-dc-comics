@@ -17,16 +17,19 @@ export default {
 <style lang="scss">
   .product-box{
     width: calc(100% / 6);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    padding: 13px;
     h3{
       color: white;
       text-transform: uppercase;
       font-size: 14px;
     }
     img{
-      height: 250px;
+      width: 100%;
+      height: 160px;
       margin-bottom: 10px;
-      object-fit: contain;
+      object-fit: cover;
+      object-position: top;
     }
   }
 </style>

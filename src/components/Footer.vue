@@ -132,6 +132,10 @@ export default {
         color: white;
         padding: 10px;
         cursor: pointer;
+        transition: all 0.5s;
+        &:hover{
+          background-color: $primary-color;
+        }
       }
       .footer-contain-right{
         display: flex;
