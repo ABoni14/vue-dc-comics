@@ -111,6 +111,7 @@ export default {
           padding: 10px;
           text-transform: uppercase;
           line-height: 96px;
+          font-weight: 700;
         }
       }
       img{

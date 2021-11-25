@@ -1,25 +1,12 @@
 <template>
   <section>
     <div class="container">
-      <div class="box">
-        <img class="little-img" src="../assets/img/buy-comics-digital-comics.png" alt="">
-        <h4>DIGITAL COMICS</h4>
-      </div>
-      <div class="box">
-        <img src="../assets/img/buy-comics-merchandise.png" alt="">
-        <h4>DC MERCHANDISE</h4>
-      </div>
-      <div class="box">
-        <img src="../assets/img/buy-comics-subscriptions.png" alt="">
-        <h4>SUBSCRIPTIONS</h4>
-      </div>
-      <div class="box">
-        <img class="little-img" src="../assets/img/buy-comics-shop-locator.png" alt="">
-        <h4>COMIC SHOP LOCATOR</h4>
-      </div>
-      <div class="box">
-        <img src="../assets/img/buy-dc-power-visa.svg" alt="">
-        <h4>DC POWER VISA</h4>
+      <div 
+      v-for="(box, index) in SectionMainData"
+      :key="index"
+      class="box">
+        <img :src="box.image" :alt="box.alt">
+        <h4>{{box.text}}</h4>
       </div>
     </div>
     
@@ -27,38 +14,13 @@
 </template>
 
 <script>
-export default {
-  name: "SectionUnderMain",
+import SectionMainData from "../assets/data/SectionMainData.js";
 
+export default {
+  
   data(){
     return{
-      boxes:[
-        {
-          url: "/digital-comics",
-          image: "../assets/img/buy-comics-digital-comics.png",
-          text: "digital comics",
-        },
-        {
-          url: "/dc-merchandise",
-          image: "../assets/img/buy-comics-merchandise.png",
-          text: "dc merchandise",
-        },
-        {
-          url: "/subscription",
-          image: "../assets/img/buy-comics-subscriptions.png",
-          text: "subscription",
-        },
-        {
-          url: "/shop-locator",
-          image: "../assets/img/buy-comics-shop-locator.png",
-          text: "comic shop locator",
-        },
-        {
-          url: "/dc-power-visa",
-          image: "../assets/img/buy-dc-power-visa.svg",
-          text: "dc power visa",
-        },
-      ]
+      SectionMainData,
     }
   }
 }
@@ -72,7 +34,7 @@ export default {
     display: flex;
     align-items: center;
     color: white;
-    padding: 40px;
+    padding: 30px;
     .container{
       padding: 20px;
       display: flex;
@@ -87,6 +49,7 @@ export default {
         }
         h4{
           font-size: 15px;
+          text-transform: uppercase;
         }
         .little-img{
           width: 38px;
