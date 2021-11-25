@@ -15,12 +15,15 @@ export default {
 </script>
 
 <style lang="scss">
+
+  @import "../assets/style/vars.scss";
+
   .product-box{
     width: calc(100% / 6);
     margin-bottom: 20px;
     padding: 13px;
     h3{
-      color: white;
+      color: $white-text;
       text-transform: uppercase;
       font-size: 14px;
     }

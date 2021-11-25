@@ -48,14 +48,14 @@ export default {
         padding: 10px 60px;
         border: none;
         margin-top: 30px;
+        cursor: pointer;
         a{
-          color: white;
+          color: $white-text;
           text-decoration: none;
           font-weight: 700;
         }
       }
     }
-    
   }
   
 </style>

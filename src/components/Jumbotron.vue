@@ -2,7 +2,7 @@
   <section class="jumbotron">
     <div class="container ab-relative">
       <div class="box-jumbotron">
-        <h2>CURRENT BOX</h2>
+        <h2>CURRENT SERIES</h2>
       </div>
     </div> 
   </section>
@@ -20,7 +20,6 @@ export default {
 
   .jumbotron{
     height: 530px;
-    min-height: 300px;
     background-image: url("../assets/img/jumbotron.jpg");
     background-repeat: no-repeat;
     background-size: cover;

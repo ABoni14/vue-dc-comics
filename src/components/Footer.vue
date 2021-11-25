@@ -79,7 +79,7 @@ export default {
     background-image: url("../assets/img/footer-bg.jpg");
     .top-footer{
       height: 400px;
-      color: white;
+      color: $white-text;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -98,7 +98,7 @@ export default {
                 color: rgb(189, 189, 189);
                 text-decoration: none;
                 &:hover{
-                  color: white;
+                  color: $white-text;
                   border-bottom: none;
               }
             }
@@ -129,7 +129,7 @@ export default {
       button{
         background-color: #303030;
         border: 2px solid $primary-color;
-        color: white;
+        color: $white-text;
         padding: 10px;
         cursor: pointer;
         transition: all 0.5s;

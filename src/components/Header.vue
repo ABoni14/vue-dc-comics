@@ -4,9 +4,10 @@
       <img src="../assets/img/dc-logo.png" alt="">
       <ul class="header-nav">
         <li
-        v-for="(link, index) in links" 
+        v-for="(link, index) in Links" 
         :key="`ciclo-nav${index}`"
-        :class="{active : (index === counter)}">
+        :class="{active : (index === counter)}"
+        @click="counter = index">
         <a
         class="nav-list"
         href="#">{{link.text}}</a></li>
@@ -17,67 +18,17 @@
 </template>
 
 <script>
+import Links from "../assets/data/LinksHeaderData";
+
 export default {
   name: "Header",
 
   data(){
     return{
-      links:[
-        {
-          url: "/characters",
-          text: "characters",
-          active: false,
-        },
-        {
-          url: "/comic",
-          text: "comic",
-          active: false,
-        },
-        {
-          url: "/movies",
-          text: "movies",
-          active: false,
-        },
-        {
-          url: "/tv",
-          text: "tv",
-          active: false,
-        },
-        {
-          url: "/games",
-          text: "games",
-          active: false,
-        },
-        {
-          url: "/collectibles",
-          text: "collectibles",
-          active: false,
-        },
-        {
-          url: "/videos",
-          text: "videos",
-          active: false,
-        },
-        {
-          url: "/fans",
-          text: "fans",
-          active: false,
-        },
-        {
-          url: "/news",
-          text: "news",
-          active: false,
-        },
-        {
-          url: "/shop",
-          text: "shop",
-          active: false,
-        },
-      ],
-      counter: 1,
+      Links,
+      counter: 0,
     }
   }
-
 }
 </script>
 
@@ -123,5 +74,4 @@ export default {
       }
     }
   }
-  
 </style>
